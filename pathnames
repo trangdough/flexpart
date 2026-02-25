@@ -1,4 +1,4 @@
-./options/
-./output/
-./inputs
-./AVAILABLE
+../options/
+../output/
+/scratch/scholar/do47/flexpart/inputs/
+../AVAILABLE

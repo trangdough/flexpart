@@ -1,0 +1,10 @@
+&SPECIES_PARAMS
+ PSPECIES    = "PM2.5",       ! Species name
+ PDECAY      = -999.9,        ! Radioactive decay constant (half life in seconds, -999.9 for none)
+ PHENRY      = -999.9,        ! Henry's law constant [M/atm], -999.9 means not applicable
+ PDENSITY    = 1500.0,        ! Particle density [kg/m**3]
+ PDQUER      = 2.5E-6,        ! Particle mean diameter [m]
+ PDSIGMA     = 3.333333,      ! Particle geometric standard deviation of the size distribution
+ PCRAIN_AERO = 1.0E-4,        ! Below-cloud scavenging (particles) - Crain (crain_aero)
+ PCSNOW_AERO = 1.0E-4,        ! Below-cloud scavenging (particles) - Csnow (csnow_aero)
+ /

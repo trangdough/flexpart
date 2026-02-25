@@ -7,3 +7,4 @@ output
 FLEXPART
 FLEXPART_MPI
 *.sif
+inputs

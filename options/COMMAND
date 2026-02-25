@@ -6,21 +6,21 @@
 ***************************************************************************************************************
 &COMMAND
  LDIRECT=               1, ! Simulation direction in time   ; 1 (forward) or -1 (backward)
- IBDATE=         20120101, ! Start date of the simulation   ; YYYYMMDD: YYYY=year, MM=month, DD=day  
- IBTIME=           060000, ! Start time of the simulation   ; HHMISS: HH=hours, MI=min, SS=sec; UTC
- IEDATE=         20120101, ! End date of the simulation     ; same format as IBDATE 
- IETIME=           120000, ! End  time of the simulation    ; same format as IBTIME
+ IBDATE=         20230203, ! Start date of the simulation   ; YYYYMMDD: YYYY=year, MM=month, DD=day  
+ IBTIME=           000000, ! Start time of the simulation   ; HHMISS: HH=hours, MI=min, SS=sec; UTC
+ IEDATE=         20230205, ! End date of the simulation     ; same format as IBDATE 
+ IETIME=           000000, ! End  time of the simulation    ; same format as IBTIME
  LOUTSTEP=           3600, ! Interval of model output; average concentrations calculated every LOUTSTEP (s)  
  LOUTAVER=           3600, ! Interval of output averaging (s)
  LOUTSAMPLE=          900, ! Interval of output sampling  (s), higher stat. accuracy with shorter intervals
  LOUTRESTART=       86400, ! Interval of writing restart files (s), switched off when set to -1
  LRECOUTSTEP=        3600, ! Interval of model output at receptors (s)
  LRECOUTAVER=        3600, ! Interval of receptor output averaging (s)
- LRECOUTSAMPLE=      1200, ! Interval of receptor output sampling (s)
+ LRECOUTSAMPLE=       900, ! Interval of receptor output sampling (s)
  LSYNCTIME=           900, ! All processes are synchronized to this time interval (s)
  CTL=          -5.0000000, ! CTL>1, ABL time step = (Lagrangian timescale (TL))/CTL, uses LSYNCTIME if CTL<0
  IFINE=                 4, ! Reduction for time step in vertical transport, used only if CTL>1 
- IOUT=                  1, ! Gridded output type: [0]off [1]mass 2]pptv 3]1&2 4]plume 5]1&4, +8 for NetCDF output     
+ IOUT=                  1, ! Gridded output type: [0]off [1]mass 2]pptv 3]1&2 4]plume 5]1&4, +8 for NetCDF output    
  IPOUT=                 0, ! Particle position output: 0]off 1]every output 2]only at end
  LSUBGRID=              0, ! Increase of ABL heights due to sub-grid scale orographic variations;[0]off 1]on 
  LCONVECTION=           1, ! Switch for convection parameterization;0]off [1]on
@@ -39,8 +39,8 @@
  LINIT_COND=            0, ! Output sensitivity to initial conditions (bkw mode only) [0]off 1]conc 2]mmr 
  SFC_ONLY=              0, ! Output only for the lowest model layer, used w/ LINIT_COND=1 or 2
  CBLFLAG=               0, ! Skewed, not Gaussian turbulence in the convective ABL, need large CTL and IFINE
- NXSHIFT=             359, ! Shift of the global meteorological data. Default 359 for ECMWF and 0 for GFS if not given
- MAXTHREADGRID=         1, ! Set maximum number of threads for doing grid computations. Recommended to set this no higher than 16. High numbers create more overhead and a larger memory footprint, 1=no parallelisation on grid.
+ NXSHIFT=               0, ! Shift of the global meteorological data. Default 359 for ECMWF and 0 for GFS if not given
+ MAXTHREADGRID=         6, ! Set maximum number of threads for doing grid computations. Recommended to set this no higher than 16. High numbers create more overhead and a larger memory footprint, 1=no parallelisation on grid.
  MAXFILESIZE=       10000, ! Maximum output of each partoutput NetCDF-4 file in Mb before a new one is created
  LOGVERTINTERP=         0, ! Flag to set all vertical interpolation to logarithmic instead of linear
  LCMOUTPUT=             0, ! Switch for the Linear Chemistry Module; [0] off [1] on
