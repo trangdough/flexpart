@@ -10,7 +10,7 @@
 ***************************************************************************************************************
 &RELEASES_CTRL
  NSPEC      =           1, ! Total number of species
- SPECNUM_REL=          25, ! Species numbers in directory SPECIES
+ SPECNUM_REL=          23, ! Species numbers in directory SPECIES
  /
 &RELEASE                   ! For each release 
  IDATE1  =       20230203, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
