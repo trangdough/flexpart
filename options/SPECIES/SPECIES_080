@@ -1,0 +1,36 @@
+&SPECIES_PARAMS
+ PSPECIES="Vinyl Chloride",   ! Tracer name, CASRN 75-01-4
+ PDECAY=-9.9,                 ! Species half life (Turned off)
+ PWETA_GAS=3.5E-05,           ! Below-cloud scavenging (gases) - A (weta_gas) 
+ PWETB_GAS=0.62,              ! Below-cloud scavenging (gases) - B (wetb_gas)
+ PCRAIN_AERO=1.0,             ! Below-cloud scavenging (particles) - Crain (crain_aero)
+ PCSNOW_AERO=1.0,             ! Below-cloud scavenging (particles) - Csnow (csnow_aero)
+ PCCN_AERO=0.9,               ! In-cloud scavenging (particles) - CCNeff (ccn_aero)
+ PIN_AERO=0.1,                ! In-cloud scavenging (particles) - INeff (in_aero)
+ PDENSITY=0,            ! Dry deposition (particles) - rho
+ PDQUER=2.0E-07,                ! Dry deposition (particles) - dquer [Tunved et al., 2013]
+ PDSIGMA=1.5,                 ! Dry deposition (particles) - dsig [Tunved et al., 2013]
+ PDRYVEL=-9.9,                ! Alternative: dry deposition velocity
+ PRELDIFF=1.6,                ! Dry deposition (gases) - D
+ PHENRY=0.125,               ! Dry deposition (gases) - Henrys const.
+ PF0=0.1,                       ! Dry deposition (gases) - f0 (reactivity)
+ PWEIGHTMOLAR=62.5,           ! molweight
+ PCCONST=1.3E-12,           ! OH Reaction rate - C [cm^3/molecule/sec]
+ PDCONST=-500,              ! OH Reaction rate - D [K]
+ PNCONST=0.0,               ! OH Reaction rate -  N (no unit)
+ /
+
+!--------------------------------------------------------------------
+! SPECIES file generated for FLEXPART (HAP subset)
+! Species: Vinyl Chloride
+! 
+! Sources:
+! Henry: OPERA QSAR model / EPA CompTox Dashboard 
+! Density: OPERA QSAR model / EPA CompTox Dashboard
+! OH Reaction Rates from JPL Chemical Kinetics and Photochemical Data 
+!  for Use in Atmospheric Studies Evaluation Number 19
+! WETA,WETB gas are reasonable defaults from other files 
+! CRAIN_AERO, CSNOW_AERO, CCN_AERO, IN_AERO are reasonable defaults from the aerosol example files
+! PDQUER is 0.2 um (2e-7 m) based on Tunved et al. (2013). Sigma is set to 1.5 to represent a typical accumulation mode particle size (Tunved et al., 2013).
+! f0 is set to 0.1 to allow for some reactivity (e.g., with surfaces) without dominating the loss processes
+!--------------------------------------------------------------------
