@@ -18,5 +18,5 @@
  NUMYGRID=      601,
  DXOUT=        0.05,
  DYOUT=        0.05,
- OUTHEIGHTS=  2.0, 100.0, 500.0, 1000.0 , 50000.0,
+ OUTHEIGHTS=  2.0, 100.0,
  /

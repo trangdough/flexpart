@@ -7,4 +7,4 @@ output
 FLEXPART
 FLEXPART_MPI
 *.sif
-inputs
+/home/do47/eco/flexpart/inputs/ncep_fnl_1x1

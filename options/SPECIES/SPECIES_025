@@ -1,5 +1,0 @@
- &SPECIES_PARAMS
- PSPECIES = "VOC_Alkane",
- PDECAY   = 302400.0,
- PHENRY   = -999.9,
- /
