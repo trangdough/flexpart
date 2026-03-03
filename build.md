@@ -2,7 +2,7 @@
 
 This guide describes the process of building the FLEXPART model from source, preparing your meteorological data, configuring your simulation scenario, and running the model.
 
-## Part 1: Build and Compile
+## Build and Compile
 
 **0. System Prerequisites**
 Ensure GNU Fortran compiler is installed.
@@ -48,7 +48,7 @@ make -j -f makefile_gfortran eta=no
 
 This process will generate an executable named `FLEXPART` in your current directory.
 
-## Part 2: Set Up the Run Environment
+## Set Up the Run Environment
 
 **1. Configure the `pathnames` file**
 Create or edit the `pathnames` file in your working directory. This file must contain exactly four lines pointing to your simulation directories. It usually looks like this:
@@ -81,7 +81,7 @@ for f in gdas1.*.grib2; do
 done
 ```
 
-## Part 3: Configure Simulation Scenario
+## Configure Simulation Scenario
 
 To change the parameters of your simulation, you will need to modify the files inside the `options/` directory and update your `AVAILABLE` file.
 
@@ -90,7 +90,7 @@ To change the parameters of your simulation, you will need to modify the files i
 * **`options/OUTGRID`**: Defines the spatial grid for the output data. It specifies the geographical domain (bounding box), the horizontal grid resolution, and the vertical height levels where concentrations or residence times will be calculated.
 * **`AVAILABLE`**: A text index file that acts as a bridge between the model and your meteorological data. It lists all available weather files in your `inputs/` directory, mapping the specific dates and times of the simulation to the corresponding `.grib2` file names.
 
-## Part 4: Run the Model
+## Run the Model
 
 Set optimal memory usage
 
@@ -101,4 +101,17 @@ export OMP_PROC_BIND=true
 
 ```bash
 ./FLEXPART
+```
+
+## Plot Simulation Results
+
+Install dependencies:
+
+```bash
+conda install conda-forge::xarray
+conda install conda-forge::matplotlib
+```
+
+```bash
+python plot/plot_ep.py
 ```
