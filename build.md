@@ -1,8 +1,4 @@
-# FLEXPART Simulation Run Guide
-
-This guide describes the process of building the FLEXPART model from source, preparing your meteorological data, configuring your simulation scenario, and running the model.
-
-## Build and Compile
+# FLEXPART Build and Compile Guide
 
 **0. System Prerequisites**
 Ensure GNU Fortran compiler is installed.
@@ -44,7 +40,7 @@ make -j -f makefile_gfortran eta=no
 ```
 
 * **Use `eta=yes` (or omit the flag)** when using ECMWF data that is on native model levels (eta coordinates).
-* **Use `eta=no**` when using data from other meteorological models (like NCEP GFS/FNL) that do not use eta coordinates.
+* **Use `eta=no`** when using data from other meteorological models (like NCEP GFS/FNL) that do not use eta coordinates.
 
 This process will generate an executable named `FLEXPART` in your current directory.
 
