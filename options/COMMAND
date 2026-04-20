@@ -6,18 +6,18 @@
 ***************************************************************************************************************
 &COMMAND
  LDIRECT=               1, ! Simulation direction in time   ; 1 (forward) or -1 (backward)
- IBDATE=         20230203, ! Start date of the simulation   ; YYYYMMDD: YYYY=year, MM=month, DD=day  
+ IBDATE=         20171211, ! Start date of the simulation   ; YYYYMMDD: YYYY=year, MM=month, DD=day  
  IBTIME=           000000, ! Start time of the simulation   ; HHMISS: HH=hours, MI=min, SS=sec; UTC
- IEDATE=         20230205, ! End date of the simulation     ; same format as IBDATE 
+ IEDATE=         20171212, ! End date of the simulation     ; same format as IBDATE 
  IETIME=           000000, ! End  time of the simulation    ; same format as IBTIME
  LOUTSTEP=           3600, ! Interval of model output; average concentrations calculated every LOUTSTEP (s)  
  LOUTAVER=           3600, ! Interval of output averaging (s)
- LOUTSAMPLE=          900, ! Interval of output sampling  (s), higher stat. accuracy with shorter intervals
- LOUTRESTART=       86400, ! Interval of writing restart files (s), switched off when set to -1
+ LOUTSAMPLE=          600, ! Interval of output sampling  (s), higher stat. accuracy with shorter intervals
+ LOUTRESTART=          -1, ! Interval of writing restart files (s), switched off when set to -1
  LRECOUTSTEP=        3600, ! Interval of model output at receptors (s)
  LRECOUTAVER=        3600, ! Interval of receptor output averaging (s)
- LRECOUTSAMPLE=       900, ! Interval of receptor output sampling (s)
- LSYNCTIME=           900, ! All processes are synchronized to this time interval (s)
+ LRECOUTSAMPLE=       600, ! Interval of receptor output sampling (s)
+ LSYNCTIME=           300, ! All processes are synchronized to this time interval (s)
  CTL=          -5.0000000, ! CTL>1, ABL time step = (Lagrangian timescale (TL))/CTL, uses LSYNCTIME if CTL<0
  IFINE=                 4, ! Reduction for time step in vertical transport, used only if CTL>1 
  IOUT=                  1, ! Gridded output type: [0]off [1]mass 2]pptv 3]1&2 4]plume 5]1&4, +8 for NetCDF output    
@@ -32,7 +32,7 @@
  IFLUX=                 0, ! Output of mass fluxes through output grid box boundaries
  MDOMAINFILL=           0, ! Switch for domain-filling, if limited-area particles generated at boundary
  IND_SOURCE=            1, ! Unit to be used at the source; [1]mass 2]mass mixing ratio 
- IND_RECEPTOR=          1, ! Unit to be used at the receptor; [0]no receptor [1]mass 2]mass mixing ratio 3]wet depo. 4]dry depo.
+ IND_RECEPTOR=          0, ! Unit to be used at the receptor; [0]no receptor [1]mass 2]mass mixing ratio 3]wet depo. 4]dry depo.
  MQUASILAG=             0, ! Quasi-Lagrangian mode to track individual numbered particles 
  NESTED_OUTPUT=         0, ! Output also for a nested domain 
  LNETCDFOUT=            1, ! Gridded netcdf output: [0]no [1]yes
