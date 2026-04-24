@@ -39,8 +39,8 @@ Navigate to the `src/` directory of your FLEXPART download and compile the model
 make -j -f makefile_gfortran eta=no
 ```
 
-* **Use `eta=yes` (or omit the flag)** when using ECMWF data that is on native model levels (eta coordinates).
-* **Use `eta=no`** when using data from other meteorological models (like NCEP GFS/FNL) that do not use eta coordinates.
+* **Use `eta=yes`** when using meteorological data on hybrid sigma-pressure (eta) coordinates — including ECMWF native model levels and NCEP GDAS/FNL (ds083.3).
+* **Use `eta=no`** when using older meteorological data on pure sigma coordinates.
 
 This process will generate an executable named `FLEXPART` in your current directory.
 
