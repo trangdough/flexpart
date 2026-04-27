@@ -111,21 +111,11 @@ conda install conda-forge::cartopy
 
 ```bash
 python plot_dispersion.py \
-  --file-path "/scratch/scholar/do47/flexpart/output/2017v5/70805FRMSPGULFS/20170226/grid_conc_20170226000000.nc" \
-  --output-dir "/scratch/scholar/do47/flexpart/output/2017v5/70805FRMSPGULFS" \
   --site-code "70805FRMSPGULFS" \
   --release-date "20170226" \
-  --release-lon -91.185503 \
-  --release-lat 30.498083 \
-  --dxout 0.02 \
-  --dyout 0.02 \
-  --numxgrid 201 \
-  --numygrid 201
 ```
 
 ```bash
 python video_dispersion.py \
-  --image-dir "/scratch/scholar/do47/flexpart/output/2017v5/70805FRMSPGULFS" \
-  --site-code "70805FRMSPGULFS" \
   --release-date "20170226"
 ```
