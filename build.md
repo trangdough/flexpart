@@ -106,6 +106,7 @@ Install dependencies:
 ```bash
 conda install conda-forge::xarray
 conda install conda-forge::matplotlib
+conda install conda-forge::cartopy
 ```
 
 ```bash
