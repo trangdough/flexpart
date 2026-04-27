@@ -109,5 +109,14 @@ conda install conda-forge::matplotlib
 ```
 
 ```bash
-python plot/plot_ep.py
+python plot_dispersion.py \
+--file-path "/scratch/scholar/do47/flexpart/output/2017v5/70805FRMSPGULFS/20170121/grid_conc_20170121000000.nc" \
+--output-dir "/home/do47/eco/flexpart/results" \
+--site-name "FORMOSA PLASTICS CORP LOUISIANA" \
+--release-lon -91.185503 \
+--release-lat 30.498083 \
+--dxout 0.05 \
+--dyout 0.05 \
+--numxgrid 201 \
+--numygrid 201
 ```
