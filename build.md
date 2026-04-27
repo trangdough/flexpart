@@ -111,13 +111,21 @@ conda install conda-forge::cartopy
 
 ```bash
 python plot_dispersion.py \
---file-path "/scratch/scholar/do47/flexpart/output/2017v5/70805FRMSPGULFS/20170121/grid_conc_20170121000000.nc" \
---output-dir "/home/do47/eco/flexpart/results" \
---site-name "FORMOSA PLASTICS CORP LOUISIANA" \
---release-lon -91.185503 \
---release-lat 30.498083 \
---dxout 0.05 \
---dyout 0.05 \
---numxgrid 201 \
---numygrid 201
+  --file-path "/scratch/scholar/do47/flexpart/output/2017v5/70805FRMSPGULFS/20170226/grid_conc_20170226000000.nc" \
+  --output-dir "/home/do47/eco/flexpart/results/" \
+  --site-code "70805FRMSPGULFS" \
+  --release-date "20170226" \
+  --release-lon -91.185503 \
+  --release-lat 30.498083 \
+  --dxout 0.02 \
+  --dyout 0.02 \
+  --numxgrid 201 \
+  --numygrid 201
+```
+
+```bash
+python video_dispersion.py \
+  --image-dir "/home/do47/eco/flexpart/results/" \
+  --site-code "70805FRMSPGULFS" \
+  --release-date "20170226"
 ```
