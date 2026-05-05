@@ -13,25 +13,25 @@
  SPECNUM_REL=          80, ! Species numbers in directory SPECIES
  /
 &RELEASE                   ! For each release 
- IDATE1  =       20171211, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
+ IDATE1  =       20170121, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
  ITIME1  =         000000, ! Release start time in UTC HHMISS: HH hours, MI=minutes, SS=seconds
- IDATE2  =       20171212, ! Release end date, same as IDATE1
+ IDATE2  =       20170122, ! Release end date, same as IDATE1
  ITIME2  =         000000, ! Release end time, same as ITIME1
  LON1    =     -91.185503, ! Left longitude of release box -180 < LON1 <180
  LON2    =     -91.185503, ! Right longitude of release box, same as LON1
  LAT1    =      30.498083, ! Lower latitude of release box, -90 < LAT1 < 90
  LAT2    =      30.498083, ! Upper latitude of release box same format as LAT1 
- Z1      =         15.804, ! Lower height of release box meters/hPa above reference level
- Z2      =         15.804, ! Upper height of release box meters/hPa above reference level
+ Z1      =         12.192, ! Lower height of release box meters/hPa above reference level
+ Z2      =         12.192, ! Upper height of release box meters/hPa above reference level
  ZKIND   =              1, ! Reference level 1=above ground, 2=above sea level, 3 for pressure in hPa
- MASS    =         1.0402, ! Total mass emitted, only relevant for fwd simulations (kg) (379.66 annual / 365)
- PARTS   =         100000, ! Total number of particles to be released
+ MASS    =       70.42773, ! Total mass emitted, only relevant for fwd simulations (kg) (2711.1215954900003 annual / 365)
+ PARTS   =        1000000, ! Total number of particles to be released
  COMMENT =    "STACK VINYL CHLORIDE", ! Comment, written in the outputfile
  /
 &RELEASE                   
- IDATE1  =       20171211, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
+ IDATE1  =       20170121, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
  ITIME1  =         000000, ! Release start time in UTC HHMISS: HH hours, MI=minutes, SS=seconds
- IDATE2  =       20171212, ! Release end date, same as IDATE1
+ IDATE2  =       20170122, ! Release end date, same as IDATE1
  ITIME2  =         000000, ! Release end time, same as ITIME1
  LON1    =     -91.185503, ! Left longitude of release box -180 < LON1 <180
  LON2    =     -91.185503, ! Right longitude of release box, same as LON1
@@ -40,7 +40,7 @@
  Z1      =            0.1, ! Lower height of release box meters/hPa above reference level
  Z2      =          3.048, ! Upper height of release box meters/hPa above reference level
  ZKIND   =              1, ! Reference level 1=above ground, 2=above sea level, 3 for pressure in hPa
- MASS    =            119, ! Total mass emitted, only relevant for fwd simulations (kg) (43395.18 annual / 365)
- PARTS   =         1000000, ! Total number of particles to be released
+ MASS    =       130.6836, ! Total mass emitted, only relevant for fwd simulations (kg) (4994.50558607 annual / 365)
+ PARTS   =        2000000, ! Total number of particles to be released
  COMMENT =    "FUGITIVE VINYL CHLORIDE", ! Comment, written in the outputfile
  /
