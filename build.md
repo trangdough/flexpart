@@ -101,7 +101,8 @@ export OMP_PROC_BIND=true
 
 ## Results
 
-### Plot Simulated Concentration
+### Plot Simulated Gridded Output Dispersion
+
 Install dependencies:
 
 ```bash
@@ -121,7 +122,16 @@ python video_dispersion.py \
   --release-date "20170226"
 ```
 
+### Plot Receptor Daily Mean
+
+```bash
+python plot_receptor_daily_mean.py \
+  --site_code "70805FRMSPGULFS" \
+  --ground_truth_mean <fitted_mean_ug_m3 from voc_monitor_censored_fits_2017.csv>
+```
+
 ### Find Nearby TRI Sites Given Receptor Coordinates
+
 ```bash
 python get_nearby_sites.py \
   --lat [receptor_lat] \
