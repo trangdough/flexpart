@@ -4,11 +4,6 @@ Extract hourly receptor concentrations from all FLEXPART simulation dates
 in /scratch/scholar/do47/flexpart/output/2017v4/<SITE_CODE>/ and write to a
 single CSV.
 
-New-run layout (v4):
-    /scratch/scholar/do47/flexpart/output/2017v4/<SITE_CODE>/YYYYMMDD/receptor_conc.nc
-Old-run layout (v3, for reference):
-    /scratch/scholar/do47/flexpart/output/2017v3/YYYYMMDD/receptor_conc_YYYYMMDD000000.nc
-
 Output columns:
     simulation_date  – the date folder (YYYYMMDD)
     datetime         – full timestamp of each hourly output
@@ -32,8 +27,8 @@ import netCDF4 as nc
 import numpy.ma as ma
 import csv
 
-DEFAULT_SITE_CODE = "70805FRMSPGULFS"
-DEFAULT_OUTPUT_ROOT = "/scratch/scholar/do47/flexpart/output/2017v6"
+DEFAULT_SITE_CODE = "70805FRMSPGULFS" # default to this site, can change site through --site-code flag in command
+DEFAULT_OUTPUT_ROOT = "/scratch/scholar/do47/flexpart/output/2017v6" # replace with your own base data storage directory
 DEFAULT_BASE_DIR = os.path.join(DEFAULT_OUTPUT_ROOT, DEFAULT_SITE_CODE, "")
 
 SPECIES_VAR = "Vinyl Chlo"
