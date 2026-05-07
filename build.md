@@ -57,6 +57,19 @@ Create or edit the `pathnames` file in your working directory. This file must co
 ```
 
 *(Make sure these directories actually exist in your workspace. If not, create them using `mkdir options output inputs`).*
+**IMPORTANT NOTE:** For ease of convenience when plotting FLEXPART output, it's recommended that your file path follows this order:
+1. `BASE_DIR`: Main base directory that stores all run scenarios
+2. `SITE_CODE`: `trifd` from `tri_voc_flexpart_2017.py`
+3. `RELEASE_DATE`: Start date in `RELEASES`
+
+This way, the path to your concentration output looks like:
+```
+{BASE_DIR}/{SITE_CODE}/{RELEASE_DATE}/grid_conc_{RELEASE_DATE}000000.nc
+```
+or
+```
+{BASE_DIR}/{SITE_CODE}/{RELEASE_DATE}/receptor_conc_{RELEASE_DATE}000000.nc
+```
 
 **2. Download NCEP Data**
 Navigate to your inputs folder and run your data download script.
@@ -112,22 +125,30 @@ conda install conda-forge::cartopy
 ```
 
 ```bash
-python plot_dispersion.py \
+python utils/plot_dispersion.py \
   --site-code "70805FRMSPGULFS" \
   --release-date "20170226" \
 ```
 
 ```bash
-python video_dispersion.py \
+python utils/video_dispersion.py \
   --release-date "20170226"
 ```
 
 ### Plot Receptor Daily Mean
 
+Extract simulated receptor concentration data into CSV
+
+```bash
+python utils/extract_receptor_conc.py \
+  --base_dir [main directory where you store your output]
+  --site-code [<trifd> from <tri_voc_flexpart_2017.csv>]
+```
+
 ```bash
 python plot_receptor_daily_mean.py \
   --site_code "70805FRMSPGULFS" \
-  --ground_truth_mean <fitted_mean_ug_m3 from voc_monitor_censored_fits_2017.csv>
+  --ground_truth_mean [<fitted_mean_ug_m3> from <voc_monitor_censored_fits_2017.csv>]
 ```
 
 ### Find Nearby TRI Sites Given Receptor Coordinates
