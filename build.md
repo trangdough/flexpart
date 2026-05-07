@@ -99,8 +99,9 @@ export OMP_PROC_BIND=true
 ./FLEXPART
 ```
 
-## Plot Simulation Results
+## Results
 
+### Plot Simulated Concentration
 Install dependencies:
 
 ```bash
@@ -118,4 +119,13 @@ python plot_dispersion.py \
 ```bash
 python video_dispersion.py \
   --release-date "20170226"
+```
+
+### Find Nearby TRI Sites Given Receptor Coordinates
+```bash
+python get_nearby_sites.py \
+  --lat [receptor_lat]
+  --lon [receptor_lon]
+  --radius [radius_in_miles]
+  --file [tri_voc_flexpart_2017.csv]
 ```
