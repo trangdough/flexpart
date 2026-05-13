@@ -12,35 +12,67 @@
  NSPEC      =           1, ! Total number of species
  SPECNUM_REL=          80, ! Species numbers in directory SPECIES
  /
-&RELEASE                   ! For each release 
- IDATE1  =       20170121, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
+&RELEASE                   ! For each release
+ IDATE1  =       20171123, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
  ITIME1  =         000000, ! Release start time in UTC HHMISS: HH hours, MI=minutes, SS=seconds
- IDATE2  =       20170122, ! Release end date, same as IDATE1
+ IDATE2  =       20171124, ! Release end date, same as IDATE1
  ITIME2  =         000000, ! Release end time, same as ITIME1
  LON1    =     -91.185503, ! Left longitude of release box -180 < LON1 <180
  LON2    =     -91.185503, ! Right longitude of release box, same as LON1
  LAT1    =      30.498083, ! Lower latitude of release box, -90 < LAT1 < 90
- LAT2    =      30.498083, ! Upper latitude of release box same format as LAT1 
+ LAT2    =      30.498083, ! Upper latitude of release box same format as LAT1
  Z1      =         12.192, ! Lower height of release box meters/hPa above reference level
  Z2      =         12.192, ! Upper height of release box meters/hPa above reference level
  ZKIND   =              1, ! Reference level 1=above ground, 2=above sea level, 3 for pressure in hPa
- MASS    =       70.42773, ! Total mass emitted, only relevant for fwd simulations (kg) (2711.1215954900003 annual / 365)
+ MASS    =   7.4277303986, ! Total mass emitted, only relevant for fwd simulations (kg) (2711.1215954900003 annual / 365)
  PARTS   =        1000000, ! Total number of particles to be released
- COMMENT =    "STACK VINYL CHLORIDE", ! Comment, written in the outputfile
+ COMMENT =    "STACK 70805FRMSPGULFS FORMOSA PLASTICS CORP LOUISIANA", ! Comment, written in the outputfile
  /
-&RELEASE                   
- IDATE1  =       20170121, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
+&RELEASE
+ IDATE1  =       20171123, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
  ITIME1  =         000000, ! Release start time in UTC HHMISS: HH hours, MI=minutes, SS=seconds
- IDATE2  =       20170122, ! Release end date, same as IDATE1
+ IDATE2  =       20171124, ! Release end date, same as IDATE1
  ITIME2  =         000000, ! Release end time, same as ITIME1
  LON1    =     -91.185503, ! Left longitude of release box -180 < LON1 <180
  LON2    =     -91.185503, ! Right longitude of release box, same as LON1
  LAT1    =      30.498083, ! Lower latitude of release box, -90 < LAT1 < 90
- LAT2    =      30.498083, ! Upper latitude of release box same format as LAT1 
- Z1      =            0.1, ! Lower height of release box meters/hPa above reference level
+ LAT2    =      30.498083, ! Upper latitude of release box same format as LAT1
+ Z1      =            0.0, ! Lower height of release box meters/hPa above reference level
+ Z2      =            0.0, ! Upper height of release box meters/hPa above reference level
+ ZKIND   =              1, ! Reference level 1=above ground, 2=above sea level, 3 for pressure in hPa
+ MASS    =  13.6835769481, ! Total mass emitted, only relevant for fwd simulations (kg) (4994.50558607 annual / 365)
+ PARTS   =        2000000, ! Total number of particles to be released
+ COMMENT =    "FUGITIVE 70805FRMSPGULFS FORMOSA PLASTICS CORP LOUISIANA", ! Comment, written in the outputfile
+ /
+&RELEASE                   ! For each release
+ IDATE1  =       20171123, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
+ ITIME1  =         000000, ! Release start time in UTC HHMISS: HH hours, MI=minutes, SS=seconds
+ IDATE2  =       20171124, ! Release end date, same as IDATE1
+ ITIME2  =         000000, ! Release end time, same as ITIME1
+ LON1    =     -91.180275, ! Left longitude of release box -180 < LON1 <180
+ LON2    =     -91.180275, ! Right longitude of release box, same as LON1
+ LAT1    =      30.273136, ! Lower latitude of release box, -90 < LAT1 < 90
+ LAT2    =      30.273136, ! Upper latitude of release box same format as LAT1
+ Z1      =        10.9728, ! Lower height of release box meters/hPa above reference level
+ Z2      =        10.9728, ! Upper height of release box meters/hPa above reference level
+ ZKIND   =              1, ! Reference level 1=above ground, 2=above sea level, 3 for pressure in hPa
+ MASS    =    8.946332799, ! Total mass emitted, only relevant for fwd simulations (kg) (3265.41147163 annual / 365)
+ PARTS   =        1500000, ! Total number of particles to be released
+ COMMENT =    "STACK 70765GRGGLHIGHW WESTLAKE CHEMICALS & VINYLS LLC", ! Comment, written in the outputfile
+ /
+&RELEASE
+ IDATE1  =       20171123, ! Release start date, YYYYMMDD: YYYY=year, MM=month, DD=day
+ ITIME1  =         000000, ! Release start time in UTC HHMISS: HH hours, MI=minutes, SS=seconds
+ IDATE2  =       20171124, ! Release end date, same as IDATE1
+ ITIME2  =         000000, ! Release end time, same as ITIME1
+ LON1    =     -91.180275, ! Left longitude of release box -180 < LON1 <180
+ LON2    =     -91.180275, ! Right longitude of release box, same as LON1
+ LAT1    =      30.273136, ! Lower latitude of release box, -90 < LAT1 < 90
+ LAT2    =      30.273136, ! Upper latitude of release box same format as LAT1
+ Z1      =            0.0, ! Lower height of release box meters/hPa above reference level
  Z2      =          3.048, ! Upper height of release box meters/hPa above reference level
  ZKIND   =              1, ! Reference level 1=above ground, 2=above sea level, 3 for pressure in hPa
- MASS    =       130.6836, ! Total mass emitted, only relevant for fwd simulations (kg) (4994.50558607 annual / 365)
- PARTS   =        2000000, ! Total number of particles to be released
- COMMENT =    "FUGITIVE VINYL CHLORIDE", ! Comment, written in the outputfile
+ MASS    =  10.3841584759, ! Total mass emitted, only relevant for fwd simulations (kg) (3790.21784372 annual / 365)
+ PARTS   =        1500000, ! Total number of particles to be released
+ COMMENT =    "FUGITIVE 70765GRGGLHIGHW WESTLAKE CHEMICALS & VINYLS LLC", ! Comment, written in the outputfile
  /
